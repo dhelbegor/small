@@ -3,12 +3,7 @@ FROM 32bit/ubuntu:14.04
 MAINTAINER Adailton do nascimento "dhelbegors@gmail.com"
 
 RUN apt-get update && apt-get install -y \
-    python3.4
-
-RUN rm /usr/bin/python
-RUN ln -s /usr/bin/python3.4 /usr/bin/python
-
-RUN apt-get install -y \
+    python3.4 \
     curl \
     git \
     nodejs \
@@ -19,6 +14,10 @@ RUN apt-get install -y \
     python-tk \
     python-imaging \
     python-bs4
+
+RUN rm /usr/bin/python
+
+RUN ln -s /usr/bin/python3.4 /usr/bin/python
 
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
