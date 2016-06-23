@@ -2,7 +2,7 @@ S M A L L
 =========
   
   
-This is my custom Dockerfile for work on systems 32 bit  
+This is a small example how use docker on systems 32 bits.  
 
 Why this?, because my computer don't suporte 64 bits distributions. /cry ;(  
   
@@ -38,12 +38,15 @@ now go to folder root/:
 $ cd root/  
 $ django-admin.py startproject some_name .  
 ```
+
+now run project:  
+```bash
+$ python manage.py runserver 0.0.0.0:8000  
+```
   
 outside of bash, edit the project:  
 ```bash
 $ sudo subl .  # Why I need use sudo?, because this is defined on build and run remember? $(pwd)/:/root  
 ```
-  
-This is a small example how use docker on systems 32 bits.  
   
 i hope this is helpful :D  
